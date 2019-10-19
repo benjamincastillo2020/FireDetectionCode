@@ -22,7 +22,7 @@ fgbg = cv2.createBackgroundSubtractorMOG2()
 #serport = serial.Serial("COM1", 115200)
 
 while(1):
-    ret, frame = cap2.read() # reading the image
+    ret, frame = cap1.read() # reading the image
     sub_image = fgbg.apply(frame) #background subtraction
     
     ret,thresh = cv2.threshold(sub_image,127,255,0) #thresholding
